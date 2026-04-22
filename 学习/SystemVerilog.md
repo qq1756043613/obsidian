@@ -49,3 +49,4 @@ int age_map [string];
 - **操作：** `age_map["Tom"] = 25;` —— 这里存入的是 **25**。
     
 
+transaction 事务，可以认为是一包数据，和package不一样，一般认为package大一些，transaction小一些。
