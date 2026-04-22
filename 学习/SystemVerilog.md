@@ -12,7 +12,6 @@ vcs:                           仿真器可执行程序，位置$VCS_HOME/bin/vc
 (native testbench options)
 
 
-![[Pasted image 20260422105207.png]
-![[Pasted image 20260422105207.png|326]]
+![[Pasted image 20260422105207.png|291]]
+![[Pasted image 20260422105625.png|664]]
 
-![[Pasted image 20260422105625.png]]
