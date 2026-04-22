@@ -18,3 +18,5 @@ vcs:                           仿真器可执行程序，位置$VCS_HOME/bin/vc
 ![[Pasted image 20260422181926.png]]
 
 只有 Wire 类型能够支持多驱驱动（通常代码没有多驱）
+
+![[Pasted image 20260422225648.png]]
