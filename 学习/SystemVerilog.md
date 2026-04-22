@@ -28,3 +28,5 @@ vcs:                           仿真器可执行程序，位置$VCS_HOME/bin/vc
 ![[Pasted image 20260423005210.png]]
 ![[Pasted image 20260423005344.png]]
 
+![[Pasted image 20260423010359.png]]
+
