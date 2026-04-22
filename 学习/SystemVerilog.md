@@ -50,3 +50,7 @@ int age_map [string];
     
 
 transaction 事务，可以认为是一包数据，和package不一样，一般认为package大一些，transaction小一些。
+
+![[Pasted image 20260423013349.png]]
+在正常变量声明前加一个rand，就变成了随机变量。
+
