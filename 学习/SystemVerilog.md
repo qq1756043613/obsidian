@@ -143,3 +143,7 @@ $cast 强制类型转换
 ![[Pasted image 20260425140355.png]]
 
 **覆盖率**
+![[Pasted image 20260425141157.png]]
+
+![[Pasted image 20260425141305.png]]
+
