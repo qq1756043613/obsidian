@@ -147,3 +147,5 @@ $cast 强制类型转换
 
 ![[Pasted image 20260425141305.png]]
 
+![[Pasted image 20260425142714.png]]
+
