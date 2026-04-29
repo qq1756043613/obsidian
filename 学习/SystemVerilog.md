@@ -29,7 +29,8 @@ vcs:                           仿真器可执行程序，位置$VCS_HOME/bin/vc
 ![[Pasted image 20260423005344.png]]
 
 ![[Pasted image 20260423010359.png]]
-
+ dyn = new\[10](dyn); 把原来的值复制过去。
+  
 ![[Pasted image 20260423010643.png]]
 
 关联数组
