@@ -94,6 +94,9 @@ transaction 事务，可以认为是一包数据，和package不一样，一般�
 
 ![[Pasted image 20260423014150.png]]
 
+package
+![[Pasted image 20260506002913.png]]
+![[Pasted image 20260506002925.png]]
 
 **过程描述**
 
