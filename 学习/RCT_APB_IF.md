@@ -1,4 +1,4 @@
 w setup：psel 拉高，pwrite 拉高。由于psel 拉高，pwrite 拉高，把pwdata送到gatepwdata，否则把全零送到pwdata。由于psel拉高，把paddr送到gateaddr，再通过一个4到16译码器，拉高某个译码器的输出。否则把全0送到paddr。
 w enable：psel 拉高，pwrite 拉高，penable拉高。**由于**psel 拉高，pwrite 拉高，penable拉高。把wen拉高，wen与4-16译码器的输出做与运算后输出为选中写某个寄存器（例如wenrtccr）。
 
-r setup：psel 拉高，pwrite 拉低。此时penable为低，~penable与~pwrite与psel输出ren。ren与上由gateaddr通过4-16译码器的输出信号，输出为选中读某个寄存器（例如renrtccr）。该信号全都连到选择器（mux）上作为选择信号，选择器的输入信号为寄存器的值，输出到nextprdata，再连接到触发器上，输出为prdata。
+r setup：psel 拉高，pwrite 拉低。此时penable为低，~penable与~pwrite与psel输出ren。ren与上由gateaddr通过4-16译码器的输出信号，输出为选中读某个寄存器（例如renrtccr）。该信号全都连到选择器（mux）上作为选择信号，选择器的输入信号为寄存器的值，输出到nextprdata，再连接到触发器上，输出为prdata。此阶段nextprdata已经更新为要读取的值，待上升沿来临将其所存。
