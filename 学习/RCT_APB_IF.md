@@ -1,3 +1,3 @@
 w setup：psel 拉高，pwrite 拉高。由于psel 拉高，pwrite 拉高，把pwdata送到gatepwdata，否则把全零送到pwdata。由于psel拉高，把paddr送到gateaddr，再通过一个4到16译码器，拉高某个译码器的输出。否则把全0送到paddr。
 w enable：psel 拉高，pwrite 拉高，penable拉高。**由于**psel 拉高，pwrite 拉高，penable拉高。把wen拉高，wen与4-16译码器的输出做与运算后输出为选中写某个寄存器（例如wenrtccr）。
-r setup：psel 拉高，
+r setup：psel 拉高，pwrite 拉低。
