@@ -1,0 +1,1 @@
+w setup：psel 拉高，pwrite 拉高。由于
