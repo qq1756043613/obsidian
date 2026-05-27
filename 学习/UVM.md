@@ -11,3 +11,7 @@ UVM是一个框架，编译时要引入uvm库
 ![[Pasted image 20260528010254.png]]
 
 每个组件的run是并行执行的，而组件内部的细分run_phase阶段是串行执行的
+
+![[Pasted image 20260528011643.png]]
+
+执行run_test()；后，通过test_name找到test_name类，通过类中的uvm_root build 成uvm_test_top。然后再一级一级的例化下面的component。
