@@ -15,7 +15,7 @@ UVM是一个框架，编译时要引入uvm库
 ![[Pasted image 20260528011643.png]]
 
 执行run_test()；后，通过test_name找到test_name类，通过类中的uvm_root build 成uvm_test_top。然后再一级一级的例化下面的component。
-通常component中负责左边的phase，test中负责右边的phase
+通常component中负责左边的phase，test中负责右边的phase。
 
 工厂模式好比让一家工厂做某个产品，你把a、b、c产品的图纸都给它，然后你想让它做哪个产品，它就会做哪个产品。
 ### 你想让它做哪个，它就做哪个 $\rightarrow$ UVM 的“覆盖” (`Override`)
@@ -45,4 +45,11 @@ set_type_override_by_type(base_packet::get_type(), advanced_packet::get_type());
 ```
 
 接下来，神奇的事情发生了：底层流水线工人完全不知道这件事，他们还是继续执行 `create("p")`，但工厂在后台自动把图纸掉包了，最后吐出来的全是**高级包**。
+
+![[Pasted image 20260528014533.png]]
+报告信息可分为by ID or by type
+
+![[Pasted image 20260528014729.png]]
+
+
 
