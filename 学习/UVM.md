@@ -50,6 +50,13 @@ set_type_override_by_type(base_packet::get_type(), advanced_packet::get_type());
 报告信息可分为by ID or by type
 
 ![[Pasted image 20260528014729.png]]
+UVM_LOW  UVM_MEDIUM、、、是啰嗦程度。
+
+![[Pasted image 20260528015018.png]]
+
+![[Pasted image 20260528015209.png]]
+
+![[Pasted image 20260528015241.png]]
 
 
 
