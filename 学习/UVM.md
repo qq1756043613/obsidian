@@ -17,3 +17,31 @@ UVM是一个框架，编译时要引入uvm库
 执行run_test()；后，通过test_name找到test_name类，通过类中的uvm_root build 成uvm_test_top。然后再一级一级的例化下面的component。
 
 工厂模式好比让一家工厂做某个产品，你把a、b、c产品的图纸都给它，然后你想让它做哪个产品，它就会做哪个产品。
+### 你想让它做哪个，它就做哪个 $\rightarrow$ UVM 的“覆盖” (`Override`)
+
+这是你比喻中最传神的地方。
+
+在传统的面向对象里，如果流水线上写死了 `product_a p = new();`，那它就只能永远生产 a。
+
+而在 UVM 的工厂机制里，流水线上写的是：
+
+代码段
+
+```
+// 厂长（底层环境）只下达了生产“普通包”的指令
+p = base_packet::type_id::create("p"); 
+```
+
+这时候，作为“大Boss”的测试用例（Test 居），在不惊动流水线工人的情况下，偷偷给工厂下了一道命令（覆盖）：
+
+> 📢 **“从现在开始，凡是要生产 `base_packet`（普通包）的地方，工厂一律按 `advanced_packet`（高级包）的图纸来生产！”**
+
+代码段
+
+```
+// 一行命令，狸猫换太子
+set_type_override_by_type(base_packet::get_type(), advanced_packet::get_type());
+```
+
+接下来，神奇的事情发生了：底层流水线工人完全不知道这件事，他们还是继续执行 `create("p")`，但工厂在后台自动把图纸掉包了，最后吐出来的全是**高级包**。
+
