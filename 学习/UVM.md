@@ -58,5 +58,13 @@ UVM_LOW  UVM_MEDIUM、、、是啰嗦程度。
 
 ![[Pasted image 20260528015241.png]]
 
+![[Pasted image 20260528015442.png]]
+
+![[Pasted image 20260528015559.png]]
+
+![[Pasted image 20260528015634.png]]
+
+![[Pasted image 20260528015745.png]]
+
 
 
