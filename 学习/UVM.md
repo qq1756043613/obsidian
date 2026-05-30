@@ -1,5 +1,6 @@
 ![[Pasted image 20260527004136.png]]
-
+![[Pasted image 20260530223112.png]]
+最外层是tb_top，在top中例化if、dut，然后通过run_test把test也包含进来，test中有env。再连dut和if、连if和test中的某个部件（在这里是env中的if0），
 
 ![[Pasted image 20260528001714.png|434]]
 UVM是一个框架，编译时要引入uvm库
