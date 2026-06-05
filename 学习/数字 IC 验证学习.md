@@ -22,3 +22,4 @@ u是撤销。
 
 [[UVM]]
 
+$cast( dest_handle, source_handle );
