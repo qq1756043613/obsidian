@@ -23,3 +23,5 @@ u是撤销。
 [[UVM]]
 
 $cast( dest_handle, source_handle );
+
+:tabnew 可以打开多个标签页
