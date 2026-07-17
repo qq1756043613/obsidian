@@ -11,18 +11,12 @@ slave 往 master 反数据时，由仲裁器选中的 master 接受数据。
 ![[Pasted image 20260717231115.png]]
 
 ![[Pasted image 20260717231222.png]]
+![[Pasted image 20260717233329.png]]
+![[Pasted image 20260717233344.png|485]]
 
-|信号/参数|含义|
-|---|---|
+![[Pasted image 20260717233538.png]]
 
-|   |   |
-|---|---|
-|`HSIZE`|每一拍传输多少字节|
+![[Pasted image 20260717233547.png]]
 
-|   |   |
-|---|---|
-|`HBURST`|一次突发一共有多少拍，以及是否卷绕|
+![[Pasted image 20260717233640.png]]
 
-|              |        |
-| ------------ | ------ |
-| `Addr_start` | 第一拍的地址 |
