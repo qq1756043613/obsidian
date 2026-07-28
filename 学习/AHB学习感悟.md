@@ -1,2 +1,2 @@
-第二个时钟周期，如果是读操作，Slave如果准备好就把ready信号拉高，然后把数据写到hrdata上。
-如果是写操作，master把数据写到hwdata上，slave如果准备好就把ready信号拉高，然后把
+![[Pasted image 20260729032417.png]]
+前三个周期可简单总结为：第一个周期，master发出命令
