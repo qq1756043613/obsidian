@@ -81,5 +81,5 @@ T2 的 `IDLE` 只表示“没有下一笔新地址传输”，不表示上一笔
 
 # select信号是由地址译码产生的，而不是直接由地址决定的，地址可以具体到slave里的某一个寄存器。
 
-# MUX用来决定哪一个slave返回数据。地址译码器用来根据master的addr产生sel信号，选中某个slave。
+# MUX用来决定哪一个slave返回数据，MUX默认返回ready为1（防止第一笔地址拿不到），其他时间当slave返回readywei。地址译码器用来根据master的addr产生sel信号，选中某个slave。
 
