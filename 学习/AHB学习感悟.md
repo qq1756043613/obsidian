@@ -86,3 +86,16 @@ T2 的 `IDLE` 只表示“没有下一笔新地址传输”，不表示上一笔
 
 # master的切换也要等到ready信号拉起。为了保证MUX已经把上一个地址锁存。
 
+# SPLIT/RETRY 使用两周期响应，目的正是给 Master 一个周期，将已经广播的下一笔传输撤销，并把 `HTRANS` 改成 `IDLE`。这里 `HREADY=1` 的含义不是“传输 A 成功了”，而是： 传输 A 以 SPLIT 结果结束，当前 Master 可以退出总线。在 T4 时钟沿，Master 正式接收到完整的 SPLIT 响应。协议要求 Master 在收到 SPLIT 或 RETRY 后立即执行一个 `IDLE` 传输，以便总线交给另一个 Master。## 普通等待和 SPLIT 的区别
+
+| 响应                      | Master 如何处理下一笔地址    |
+| ----------------------- | ------------------- |
+| `HREADY=0, HRESP=OKAY`  | 保持地址和控制不变，继续等待      |
+| `HREADY=0, HRESP=SPLIT` | 识别特殊响应，取消下一笔传输      |
+| `HREADY=1, HRESP=SPLIT` | 当前传输以 SPLIT 结束，让出总线 |
+| `HREADY=1, HRESP=OKAY`  | 当前传输成功完成，正常进入下一笔    |
+
+![[Pasted image 20260730135326.png]]
+
+
+
