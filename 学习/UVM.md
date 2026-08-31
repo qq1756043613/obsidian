@@ -108,3 +108,4 @@ UVM_LOW  UVM_MEDIUM、、、是啰嗦程度。
 
 ![[Pasted image 20260604012023.png]]
 
+什么是interface？为什么interface只实例化一次，后面都用virtual interface？interface是如何连接dut和tb的？interface是物理的还是是虚拟的？为什么能连接二者？
