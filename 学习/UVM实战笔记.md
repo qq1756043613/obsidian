@@ -22,3 +22,6 @@ interface也是一个组件，里面包含了接口的信息，也需要向其�
 
 类名 / 类型名、实例名、层次路径（full name）之间的关系：
 `run_test()` 的参数决定顶层创建哪一种 test 类型，但顶层 test 的实例名固定为 `uvm_test_top`；其他 component 在 `create("实例名", parent)` 时，第一个参数决定实例名，第二个参数决定父子层次关系，而“父组件路径 + 当前实例名”共同构成该 component 的完整层次路径。
+
+
+uvm_config_db#()是一个参数化的类。
