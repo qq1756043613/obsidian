@@ -14,3 +14,7 @@ interface也是一个组件，里面包含了接口的信息，也需要向其�
 ![[Pasted image 20260902130707.png|544]]
 
 
+这个问题的终极 原因在于UVM通过run_test语句实例化了一个脱离了 top_tb层次结构的实例,建立了一个新的层次结构。
+
+
+当UVM启动 后,会自动执行build_phase。build_phase在new函数之后main_phase之前执行。在build_phase中主要通过 config_db的set和get操作来传递一些数据，以及实例化成员变量等。
