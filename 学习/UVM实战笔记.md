@@ -10,7 +10,7 @@ raise_objection语句必须在main_phase中第一个 消耗仿真时间的语句
 
 
 interface也是一个组件，里面包含了接口的信息，也需要向其输入必要的信号（如clk、rstn等）。使用时也要在top_tb
-中实例化。只要把interface中包含的信号
+中实例化。只要把interface中包含的信号值改了，那么连接到interface上的dut的信号自然也会改变。
 ![[Pasted image 20260902130707.png|544]]
 
 
