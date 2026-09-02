@@ -3,5 +3,8 @@
 
 
 UVM 的 task phase（如 `run_phase`、`main_phase`）通过 objection 机制判断“这个 phase 里是否还有事情没做完”。只要还有 objection 没有 drop，UVM 就继续停留在当前 phase；当所有 objection 都被撤销后，当前 phase 才结束并进入下一个 phase。
+Objection 是 UVM task phase 的结束控制机制。当某个 component 调用 `raise_objection()` 时，表示当前 phase 中还有任务没有完成，UVM 不会结束该 phase；当各个 component 对应的 objection 都通过 `drop_objection()` 撤销，使 objection count 变为 0 后，当前 phase 才结束并进入下一个 phase。因此 objection 常用于保证 sequence、DUT 响应以及检查过程完成后再结束仿真阶段。
 
+
+raise_objection语句必须在main_phase中第一个 消耗仿真时间的语句之前。
 
