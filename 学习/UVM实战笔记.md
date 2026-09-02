@@ -8,3 +8,5 @@ Objection 是 UVM task phase 的结束控制机制。当某个 component 调用 
 
 raise_objection语句必须在main_phase中第一个 消耗仿真时间的语句之前。
 
+
+interface也是一个组件，里面包含了接口的
